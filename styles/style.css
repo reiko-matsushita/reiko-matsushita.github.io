@@ -1,0 +1,269 @@
+/* ====== GLOBAL STYLES ====== */
+body {
+  font-family: Lato, sans-serif;
+  margin: 10px;
+  padding: 60px 50px;
+  background: #fafafa;
+  color: #475970;
+}
+
+
+/* ====== HEADER ====== */
+header {
+  font-family: Lato, sans-serif;
+  text-align: left;
+  font-size: 0.9em;
+  padding: 0px 50px; /* top-bottom left-right */
+  margin: 0px;
+}
+
+header h1 {
+  margin: 0px;
+  padding: 0px 0px;
+  font-size: 2.2em;
+  color: #475970; /* Dark blue-gray, change as you like */
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+
+header p {
+  color: #5a6c82;
+  font-size: 1.1em;
+  letter-spacing: .5px;
+}
+
+
+.intro {
+  font-family: Lato, sans-serif;
+  font-size: .8em;   /* smaller than normal text */
+  color: #7a8a99;     /* softer muted tone */
+  font-style: normal; /* optional, makes it feel light */
+  margin-top: 10px;    /* just a bit of breathing room */
+  line-height: 1.4;
+  letter-spacing: .5px;
+}
+
+.availability {
+  /* font-family: Lato, sans-serif; */
+  font-size: 2.0em;
+  color: #cd07a2;
+  font-style: normal; /* optional, makes it feel light */
+  margin-top: 15px;
+  margin-bottom: 15px;    
+}
+
+#portfolio {
+  padding: 20px 50px;
+  text-align: left;
+}
+
+#portfolio h2 {
+  margin-bottom: 30px;
+  font-family: Lato, sans-serif;
+  font-size: 1.4em;
+  color: #475970;
+}
+
+#animationwork {
+  padding: 20px 50px;
+  text-align: left;
+}
+
+#animationwork h2 {
+  margin-bottom: 50px;
+  margin-bottom: 2px;
+  font-family: Lato, sans-serif;
+  font-size: 1.4em;
+  color: #475970;
+}
+
+/* ====== GALLERY GRID ====== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+}
+
+.gallery2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  row-gap: 50px;
+}
+
+.gallery_fixed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* vertical space between rows */
+}
+
+.row {
+  display: flex;
+  gap: 20px; /* space between images in a row */
+}
+/* First row: taller images */
+.row row-large .portfolio-item img {
+  height: 300px; /* taller images */
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
+  display: block;
+}
+
+.row row-medium .portfolio-item img {
+  height: 270px; /* shorter than first row */
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
+  display: block;
+}
+
+.row-small .portfolio-item img {
+  height: 200px; /* shorter than first row */
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
+  display: block;
+}
+
+.row-set .portfolio-item {
+  flex: 1;              /* share available space equally */
+  overflow: hidden;     /* hide cropped edges */
+}
+
+.row-set .portfolio-item img {
+  width: 100%;
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
+  display: block;
+}
+
+
+.portfolio-item_main {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.portfolio-item_main a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-item_main img {
+  width: 100%;
+  height: 240; 
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item_main:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.portfolio-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.crop-16x9 {
+  aspect-ratio: 16 / 9;   /* force a 16:9 box */
+  width: 100%;            /* full width of container */
+  overflow: hidden;       /* hide cropped parts */
+  border-radius: 8px;
+}
+
+.crop-16x9 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* crop while keeping aspect ratio */
+  display: block;
+}
+
+/* Overlay text on hover */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-item_main:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0 0 5px;
+  font-size: 1.1em;
+}
+
+.overlay p {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+}
+
+.overlay a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link {
+  text-align: Left;
+  margin:15px 50px;
+}
+
+.back-link a {
+  color: #7a8a99;        /* change color as desired */
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin: 15px 50px;
+  padding: 0px 0px;
+  font-size: 0.8rem;
+  background-color: #f0f0f0; /* optional, to separate footer */
+}
+
+footer a.footer-link {
+  color: #0077cc;      /* change this to whatever color you like */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 10px 0px;
+  padding: 10px 0px;
+  color: #666;          /* subtle gray for copyright */
+  font-size: 0.8rem;
+}
