@@ -21,7 +21,7 @@ header h1 {
   margin: 0px;
   padding: 0px 0px;
   font-size: 2.2em;
-  color: #475970; /* Dark blue-gray, change as you like */
+  color: #475970; 
   font-weight: 900;
   letter-spacing: .5px;
 }
@@ -35,7 +35,7 @@ header p {
 
 .intro {
   font-family: Lato, sans-serif;
-  font-size: .8em;   /* smaller than normal text */
+  font-size: 1.0em;   /* smaller than normal text */
   color: #7a8a99;     /* softer muted tone */
   font-style: normal; /* optional, makes it feel light */
   margin-top: 10px;    /* just a bit of breathing room */
@@ -44,10 +44,10 @@ header p {
 }
 
 .availability {
-  /* font-family: Lato, sans-serif; */
-  font-size: 2.0em;
-  color: #cd07a2;
-  font-style: normal; /* optional, makes it feel light */
+  font-family: "Yu Gothic";
+  font-size: .9em;
+  color: #717b83;
+  font-style: normal;
   margin-top: 15px;
   margin-bottom: 15px;    
 }
